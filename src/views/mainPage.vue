@@ -16,12 +16,14 @@
 				{{ $t('Main_Page.Special') }}
 			</div>
 
-			<div class="Chat_Button bg-FEB92E br-6 flex flex-center align-center mt-half pointer"
-				style="width: 170px; height: 34px;">
-				<div class="color-1E233A fs-16 fw-700">
-					{{ $t('Main_Page.Chat') }}
+			<a href="https://t.me/nightmus3" style="text-decoration: none;">
+				<div class="Chat_Button bg-FEB92E br-6 flex flex-center align-center mt-half pointer"
+					style="width: 170px; height: 34px;">
+					<div class="color-1E233A fs-16 fw-700">
+						{{ $t('Main_Page.Chat') }}
+					</div>
 				</div>
-			</div>
+			</a>
 
 		</div>
 	</section>

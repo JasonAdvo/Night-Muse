@@ -69,17 +69,19 @@
 		</div>
 
 		<!-- Chat Button -->
-		<div class="mt-1">
-			<div class="w-full">
-				<div class="bg-FEC72E br-11 pointer Chat_Button" style="padding: 8px 0;">
-					<div class="flex flex-center align-center">
-						<div class="fs-24 fw-700 color-1E233A">
-							和我聊天吧
+		<a href="https://t.me/nightmus3" style="text-decoration: none;">
+			<div class="mt-1">
+				<div class="w-full">
+					<div class="bg-FEC72E br-11 pointer Chat_Button" style="padding: 8px 0;">
+						<div class="flex flex-center align-center">
+							<div class="fs-24 fw-700 color-1E233A">
+								和我聊天吧
+							</div>
 						</div>
 					</div>
 				</div>
 			</div>
-		</div>
+		</a>
 
 		<!-- 热门推荐 -->
 		<div class="mt-2">
