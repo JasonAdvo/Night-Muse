@@ -1,0 +1,277 @@
+@import './base.css';
+
+body {
+	background-color: #1E233A;
+	min-height: 100vh;
+	height: 100%;
+}
+
+#app {
+	/* max-width: 1280px; */
+	/* margin: 0 auto; */
+	/* padding: 2rem; */
+	font-weight: normal;
+}
+
+/* Position CSS */
+.relative {
+	position: relative;
+}
+
+.absolute {
+	position: absolute;
+}
+
+/* Flex CSS */
+.flex {
+	display: flex;
+}
+
+.flex-between {
+	justify-content: space-between;
+}
+
+.flex-center {
+	justify-content: center;
+}
+
+.flex-column {
+	flex-direction: column;
+}
+
+.align-center {
+	align-items: center;
+}
+
+.gap-5 {
+	gap: 5px;
+}
+
+.gap-10 {
+	gap: 10px;
+}
+
+/* Grid CSS */
+.grid {
+	display: grid;
+}
+
+.grid-center {
+	justify-items: center;
+}
+
+/* Padding CSS */
+.px-half {
+	padding: 0 .5rem;
+}
+
+.px-1 {
+	padding: 0 1rem;
+}
+
+.px-2 {
+	padding: 0 2rem;
+}
+
+.pt-half {
+	padding-top: .5rem;
+}
+
+.pt-1 {
+	padding-top: 1rem;
+}
+
+.pt-1-half {
+	padding-top: 1.5rem;
+}
+
+.pt-2 {
+	padding-top: 2rem;
+}
+
+.pb-half {
+	padding-bottom: 0.5rem;
+}
+
+/* Background CSS */
+.bg-394264 {
+	background: #394264;
+}
+
+.bg-1E233A {
+	background: #1E233A;
+}
+
+.bg-FEB92E {
+	background: #FEB92E;
+}
+
+.bg-FEC72E {
+	background: #FEC72E;
+}
+
+.bg-EC404B {
+	background: #EC404B;
+}
+
+/* Border Radius CSS */
+.br-6 {
+	border-radius: 6px;
+}
+
+.br-7 {
+	border-radius: 7px;
+}
+
+.br-8 {
+	border-radius: 8px;
+}
+
+.br-11 {
+	border-radius: 11px;
+}
+
+.br-12 {
+	border-radius: 12px;
+}
+
+.br-13 {
+	border-radius: 13px;
+}
+
+/* Text CSS */
+.text-center {
+	text-align: center;
+}
+
+.LH-30 {
+	line-height: 30px;
+}
+
+/* Text Color CSS */
+.color-white {
+	color: #FFF;
+}
+
+.color-1E233A {
+	color: #1E233A;
+}
+
+.color-8F97B5 {
+	color: #8F97B5;
+}
+
+/* Font Size CSS */
+.fs-16 {
+	font-size: 16px;
+}
+
+.fs-18 {
+	font-size: 18px;
+}
+
+.fs-22 {
+	font-size: 22px;
+}
+
+.fs-24 {
+	font-size: 24px;
+}
+
+/* Font Weight CSS */
+.fw-600 {
+	font-weight: 600;
+}
+
+.fw-700 {
+	font-weight: 700;
+}
+
+.fw-800 {
+	font-weight: 800;
+}
+
+/* Margin CSS */
+.mx-auto {
+	margin: 0 auto;
+}
+
+.mt-half {
+	margin-top: .5rem;
+}
+
+.mt-1 {
+	margin-top: 1rem;
+}
+
+.mt-1-half {
+	margin-top: 1.5rem;
+}
+
+.mt-2 {
+	margin-top: 2rem;
+}
+
+.mb-half {
+	margin-bottom: 0.5rem;
+}
+
+.mb-1 {
+	margin-bottom: 1rem;
+}
+
+.mb-2 {
+	margin-bottom: 2rem;
+}
+
+/* Width */
+.w-full {
+	width: 100%;
+}
+
+.w-48 {
+	width: 48%;
+}
+
+.w-49 {
+	width: 49%;
+}
+
+.w-50 {
+	width: 50%;
+}
+
+.w-80 {
+	width: 80%;
+}
+
+.mw-300 {
+	max-width: 300px;
+}
+
+/* Cursor CSS */
+.pointer {
+	cursor: pointer;
+}
+
+/* Border CSS */
+.bb-1-sidebar {
+	border-bottom: 2px solid rgba(143, 151, 181, 0.20);
+}
+
+.bt-1-sidebar {
+	border-top: 2px solid rgba(143, 151, 181, 0.20);
+}
+
+
+
+
+
+/* @media (min-width: 1024px) {
+
+	#app {
+		display: grid;
+		grid-template-columns: 1fr 1fr;
+		padding: 0 2rem;
+	}
+} */

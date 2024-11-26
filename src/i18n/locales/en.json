@@ -1,0 +1,16 @@
+{
+	"message": "EN Message",
+	"main_page": "Main Page EN",
+	"ladies_page": "Ladies Page EN",
+	"Ladies_profile": "Ladies Profile EN",
+	"Side_Menu": {
+		"Main": "Main Page",
+		"Ladies": "Ladies",
+		"Contact": "Contact Us"
+	},
+	"Main_Page": {
+		"Special": "Want a little special company?",
+		"Chat": "Chat me up",
+		"Today_Ladies": "Today Ladies"
+	}
+}

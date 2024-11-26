@@ -1,0 +1,16 @@
+{
+	"message": "ZH Message",
+	"main_page": "Main Page ZH",
+	"ladies_page": "Ladies Page ZH",
+	"Ladies_profile": "Ladies Profile ZH",
+	"Side_Menu": {
+		"Main": "主页",
+		"Ladies": "佳丽",
+		"Contact": "联系我们"
+	},
+	"Main_Page": {
+		"Special": "想要一点特别的陪伴",
+		"Chat": "和我聊天吧",
+		"Today_Ladies": "今日佳丽"
+	}
+}
