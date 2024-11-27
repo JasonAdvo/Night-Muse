@@ -39,10 +39,10 @@
 
 			<div class="Ladies_Display_Container bg-394264 br-13 pt-half px-half pb-half mx-auto mt-half mb-half">
 				<div class="Ladies_Display grid grid-center flex-center">
-					<div v-for="(lady, index) in Ladies.slice(0, 20)" :key="index"
+					<div v-for="(lady, index) in randomLadiesList" :key="index"
 						class="gallery-item bg-1E233A br-12 flex flex-column pointer"
 						style="height: 250px; width: 100%; max-width: 200px; overflow: hidden;"
-						@click="goToLadyProfile(index)">
+						@click="goToLadyProfile(ladyIndexMap[index])">
 						<img style="width: 100%; max-width: 200px; height: 80%; object-fit: cover;"
 							:src="lady.ImageList[0]" alt="Cover image" />
 
@@ -51,6 +51,16 @@
 							{{ lady.name[this.$i18n.locale] }}, {{ lady.age }}
 						</div>
 					</div>
+				</div>
+
+				<div class="mt-1">
+					<router-link to="/ladiesPage" style="text-decoration: none;">
+						<div class="More_Button bg-FEB92E br-6 flex flex-center align-center" style="height: 34px;">
+							<div class="color-1E233A fs-16 fw-700">
+								更多佳丽
+							</div>
+						</div>
+					</router-link>
 				</div>
 			</div>
 
@@ -70,11 +80,14 @@ export default {
 	},
 	data() {
 		return {
-			Ladies: LadiesList // Make sure Ladies is defined here
+			Ladies: LadiesList, // Make sure Ladies is defined here
+			ladyIndexMap: [],
+			randomLadiesList: [],
 		}
 	},
 
 	mounted() {
+		this.shuffleLadiesList();
 		// console.log(this.Ladies)
 	},
 	methods: {
@@ -84,6 +97,30 @@ export default {
 
 			this.$store.dispatch('setLadiesProfile', true);
 		},
+		shuffleLadiesList() {
+			const first50Ladies = this.Ladies.slice(0, 50); // Take the first 50 ladies
+
+
+			const shuffledLadies = this.shuffleArray(first50Ladies); // Shuffle the filtered list
+
+			const selectedLadies = shuffledLadies.slice(0, 20); // Take the first 4 after shuffle
+
+			// Map the original indices of the selected ladies
+			this.ladyIndexMap = selectedLadies.map(lady =>
+				this.Ladies.indexOf(lady)
+			);
+
+			this.randomLadiesList = selectedLadies; // Store the new shuffled list
+		},
+		// Shuffle the array using Fisher-Yates shuffle algorithm
+		shuffleArray(array) {
+			let shuffledArray = array.slice(); // Create a copy of the array
+			for (let i = shuffledArray.length - 1; i > 0; i--) {
+				const j = Math.floor(Math.random() * (i + 1));
+				[shuffledArray[i], shuffledArray[j]] = [shuffledArray[j], shuffledArray[i]]; // Swap elements
+			}
+			return shuffledArray;
+		}
 	}
 };
 
@@ -111,6 +148,15 @@ export default {
 .Chat_Button:hover {
 	background: rgb(255, 170, 0);
 	transform: scale(1.05);
+}
+
+.More_Button {
+	transition: 0.5s;
+}
+
+.More_Button:hover {
+	background: rgb(255, 170, 0);
+	transform: scale(1.008);
 }
 
 @media screen and (min-width: 520px) {
