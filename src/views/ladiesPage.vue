@@ -1,12 +1,12 @@
 <template>
-	<div style="position: sticky; top: 0;">
+	<div style="position: sticky; top: 0; z-index: 10;">
 		<topBar />
 	</div>
 
 	<section class="mt-half	">
 		<div class="Main_Page_Ladies_Section px-1">
 			<!-- style="position: sticky; top: 60px;" -->
-			<div class="w-full bg-1E233A">
+			<div class="w-full bg-1E233A" style="position: sticky; top: 60px;">
 				<div class="color-8F97B5 fs-24 fw-800 text-center">
 					{{ $t('Main_Page.Today_Ladies') }}
 				</div>
