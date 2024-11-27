@@ -32,7 +32,9 @@ export default {
 		...mapGetters(['currentPopUpState'])
 	},
 	mounted() {
-		document.body.style.overflow = 'hidden'; // Disable scrolling when pop-up appears
+		if (this.currentPopUpState == true) {
+			document.body.style.overflow = 'hidden'; // Disable scrolling when pop-up appears
+		}
 	},
 	methods: {
 		closePopup() {
