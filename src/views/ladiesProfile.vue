@@ -9,9 +9,8 @@
 
 			<div class="w-48" style="height: 250px;">
 
-				<img class="br-8" style="width: 100%; height: 100%; object-fit: cover;"
-					:src="`/images/Ladies_Gallery/${parseInt(this.$route.params.id) + 1}/1.webp`"
-					:alt="`Cover image for folder ${parseInt(this.$route.params.id) + 1}`">
+				<img class="br-8" style="width: 100%; height: 100%; object-fit: cover;" :src="lady.ImageList[0]"
+					alt="Cover image">
 
 			</div>
 
@@ -47,25 +46,12 @@
 			简介：{{ lady.Description[this.$i18n.locale] }}
 		</div>
 
-		<!-- First Image -->
-		<div v-if="imageExists('2')" class="mt-1-half" style="height: 400px;">
-			<img class="" style="width: 100%; height: 100%; object-fit: cover;"
-				:src="`/images/Ladies_Gallery/${parseInt(this.$route.params.id) + 1}/2.webp`"
-				:alt="`Cover image for folder ${parseInt(this.$route.params.id) + 1}`">
-		</div>
+		<!-- Image List -->
 
-		<!-- Second Image -->
-		<div v-if="imageExists('3')" class="mt-1" style="height: 400px;">
-			<img class="" style="width: 100%; height: 100%; object-fit: cover;"
-				:src="`/images/Ladies_Gallery/${parseInt(this.$route.params.id) + 1}/3.webp`"
-				:alt="`Cover image for folder ${parseInt(this.$route.params.id) + 1}`">
-		</div>
-
-		<!-- Third Image -->
-		<div v-if="imageExists('4')" class="mt-1" style="height: 400px;">
-			<img class="" style="width: 100%; height: 100%; object-fit: cover;"
-				:src="`/images/Ladies_Gallery/${parseInt(this.$route.params.id) + 1}/4.webp`"
-				:alt="`Cover image for folder ${parseInt(this.$route.params.id) + 1}`">
+		<div class="mt-half">
+			<div class="mt-1" v-for="(Image, Index) in lady.ImageList.slice(1, 4)" :key="Index" style="height: 400px;">
+				<img :src="Image" style="width: 100%; height: 100%; object-fit: cover;" alt="Lady Image">
+			</div>
 		</div>
 
 		<!-- Chat Button -->
@@ -143,24 +129,6 @@ export default {
 		},
 	},
 	methods: {
-		imageExists(imageNumber) {
-			const imageUrl = `/images/Ladies_Gallery/${parseInt(this.$route.params.id) + 1}/${imageNumber}.webp`;
-
-			// Create a new image element to check if it loads successfully
-			const img = new Image();
-			img.onload = () => {
-				this.imageStatus[imageNumber] = true; // Image is available
-			};
-			img.onerror = () => {
-				this.imageStatus[imageNumber] = false; // Image is not available
-			};
-
-			// Start loading the image (without appending it to the DOM)
-			img.src = imageUrl;
-
-			// Return the image status
-			return this.imageStatus[imageNumber];
-		},
 		goToLadyProfile(index) {
 			// Navigate to the ladiesProfile page with the `id` of the selected lady
 			this.$router.push({ name: 'ladiesProfile', params: { id: index } });
