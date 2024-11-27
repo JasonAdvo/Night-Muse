@@ -6,11 +6,11 @@
 	<section class="mt-half	">
 		<div class="Main_Page_Ladies_Section px-1">
 			<!-- style="position: sticky; top: 60px;" -->
-			<div class="w-full bg-1E233A" style="position: sticky; top: 60px;">
+			<!-- <div class="w-full bg-1E233A" style="position: sticky; top: 60px;">
 				<div class="color-8F97B5 fs-24 fw-800 text-center">
 					{{ $t('Main_Page.Today_Ladies') }}
 				</div>
-			</div>
+			</div> -->
 
 			<div class="Ladies_Display_Container bg-394264 br-13 pt-half px-half pb-half mx-auto mt-half mb-half">
 				<div class="Ladies_Display grid grid-center flex-center">
