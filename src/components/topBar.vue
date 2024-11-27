@@ -116,40 +116,40 @@ export default {
 				this.isOpen = !this.isOpen;
 			}
 		},
-		handleLanguageChange(event) {
-			const lang = event.target.value; // Get selected language code
-			this.changeLanguage(lang); // Call the provided changeLanguage method
-		},
-		changeLanguage(lang) {
-			const currentRoute = this.$router.currentRoute.value;
-			let newPath = currentRoute.path;
+		// handleLanguageChange(event) {
+		// 	const lang = event.target.value; // Get selected language code
+		// 	this.changeLanguage(lang); // Call the provided changeLanguage method
+		// },
+		// changeLanguage(lang) {
+		// 	const currentRoute = this.$router.currentRoute.value;
+		// 	let newPath = currentRoute.path;
 
-			console.log('Current Path:', newPath);  // Debugging the current path
+		// 	console.log('Current Path:', newPath);  // Debugging the current path
 
-			// If the current path is the root '/', switch to '/en' if language is English, or to '/' for Chinese
-			if (newPath === '/') {
-				// If at root path and switching to English, set the path to '/en'
-				newPath = lang === 'en' ? '/en' : '/';
-			} else if (lang === 'en' && !newPath.startsWith('/en')) {
-				// If switching to English and the path doesn't start with '/en', prepend '/en'
-				newPath = `/en${newPath}`;
-			} else if (lang === 'zh' && newPath.startsWith('/en')) {
-				// If switching to Chinese and the path starts with '/en', remove '/en'
-				newPath = newPath.replace(/^\/en/, '');
-				// If the path becomes empty after removing '/en', set it to '/'
-				if (newPath === '') {
-					newPath = '/';
-				}
-			}
+		// 	// If the current path is the root '/', switch to '/en' if language is English, or to '/' for Chinese
+		// 	if (newPath === '/') {
+		// 		// If at root path and switching to English, set the path to '/en'
+		// 		newPath = lang === 'en' ? '/en' : '/';
+		// 	} else if (lang === 'en' && !newPath.startsWith('/en')) {
+		// 		// If switching to English and the path doesn't start with '/en', prepend '/en'
+		// 		newPath = `/en${newPath}`;
+		// 	} else if (lang === 'zh' && newPath.startsWith('/en')) {
+		// 		// If switching to Chinese and the path starts with '/en', remove '/en'
+		// 		newPath = newPath.replace(/^\/en/, '');
+		// 		// If the path becomes empty after removing '/en', set it to '/'
+		// 		if (newPath === '') {
+		// 			newPath = '/';
+		// 		}
+		// 	}
 
-			console.log('New Path:', newPath);  // Debugging the new path
+		// 	console.log('New Path:', newPath);  // Debugging the new path
 
-			// Push the new path after modification
-			this.$router.push(newPath);
+		// 	// Push the new path after modification
+		// 	this.$router.push(newPath);
 
-			// Call the switchLanguage function to handle locale changes
-			switchLanguage(lang);
-		}
+		// 	// Call the switchLanguage function to handle locale changes
+		// 	switchLanguage(lang);
+		// }
 	},
 };
 </script>

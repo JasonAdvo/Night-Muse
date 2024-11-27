@@ -3,8 +3,8 @@ import { createStore } from 'vuex';
 
 const store = createStore({
 	state: {
-		isLadiesProfile: false, // Keeps track of whether we're on a lady's profile
-		menuIcon: '/images/Menu.webp', // Default menu icon
+		isLadiesProfile: JSON.parse(localStorage.getItem('isLadiesProfile')) || false, // Keeps track of whether we're on a lady's profile
+		menuIcon: localStorage.getItem('menuIcon') || '/images/Menu.webp', // Default menu icon
 		backImage: '/images/Back.svg', // Back icon for ladies profile
 		isPopupVisible: true
 	},
@@ -17,7 +17,9 @@ const store = createStore({
 		// Set the state for LadiesProfile and update the menu icon accordingly
 		setLadiesProfile(state, value) {
 			state.isLadiesProfile = value;
+			localStorage.setItem('isLadiesProfile', JSON.stringify(value));
 			state.menuIcon = value ? state.backImage : '/images/Menu.webp'; // Set the icon to back if profile is true
+			localStorage.setItem('menuIcon', state.menuIcon);
 		},
 		setPopUpState(state) {
 			state.isPopupVisible = false;
@@ -25,7 +27,7 @@ const store = createStore({
 	},
 	actions: {
 		// Action to change button state
-		changeButtonState({ commit }) {
+		setButtonState({ commit }) {
 			commit('setButtonState');
 		},
 		// Action to set LadiesProfile state
