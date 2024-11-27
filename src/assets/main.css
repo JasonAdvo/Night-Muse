@@ -1,7 +1,7 @@
 @import './base.css';
 
 body {
-	background-color: #1E233A;
+	background-color: #1E233A !important;
 	min-height: 100vh;
 	height: 100%;
 }
@@ -23,26 +23,6 @@ body {
 }
 
 /* Flex CSS */
-.flex {
-	display: flex;
-}
-
-.flex-between {
-	justify-content: space-between;
-}
-
-.flex-center {
-	justify-content: center;
-}
-
-.flex-column {
-	flex-direction: column;
-}
-
-.align-center {
-	align-items: center;
-}
-
 .gap-5 {
 	gap: 5px;
 }
@@ -56,17 +36,9 @@ body {
 	display: grid;
 }
 
-.grid-center {
-	justify-items: center;
-}
-
 /* Padding CSS */
 .px-half {
 	padding: 0 .5rem;
-}
-
-.px-1 {
-	padding: 0 1rem;
 }
 
 .px-2 {
@@ -192,18 +164,6 @@ body {
 }
 
 /* Margin CSS */
-.mx-auto {
-	margin: 0 auto;
-}
-
-.mt-half {
-	margin-top: .5rem;
-}
-
-.mt-1 {
-	margin-top: 1rem;
-}
-
 .mt-1-half {
 	margin-top: 1.5rem;
 }

@@ -3,38 +3,38 @@
 		<topBar />
 	</div>
 
-	<div class="px-1 pt-1-half mx-auto" style="min-height: 100vh; max-width: 500px;">
+	<div class="px-3 pt-1-half mx-auto" style="min-height: 100vh; max-width: 500px;">
 
-		<div class="flex flex-between">
+		<div class="d-flex justify-content-between">
 
 			<div class="w-48" style="height: 250px;">
 
-				<img class="br-8" style="width: 100%; height: 100%; object-fit: cover;" :src="lady.ImageList[0]"
-					alt="Cover image">
+				<img v-lazy="lady.ImageList[0]" class="br-8" alt="Cover image"
+					style="width: 100%; height: 100%; object-fit: cover;" />
 
 			</div>
 
-			<div class="w-48 flex flex-column flex-between" style="height: 250px;">
+			<div class="w-48 d-flex flex-column justify-content-between" style="height: 250px;">
 
-				<div class="fs-18 fw-600 color-8F97B5">
+				<div class="fs-16 fw-600 color-8F97B5">
 					名字 ：{{ lady.name[this.$i18n.locale] }} ( {{ lady.name['en'] }} )
 				</div>
 
-				<div class="fs-18 fw-600 color-8F97B5">
+				<div class="fs-16 fw-600 color-8F97B5">
 					年龄 ：{{ lady.age }}
 				</div>
 
-				<div class="fs-18 fw-600 color-8F97B5">
+				<div class="fs-16 fw-600 color-8F97B5">
 					三围 ：{{ lady.parameter }}
 				</div>
 
-				<div class="fs-18 fw-600 color-8F97B5">
+				<div class="fs-16 fw-600 color-8F97B5">
 					国际 ：{{ lady.nation[this.$i18n.locale] }}
 				</div>
 
-				<div class="flex fs-18 fw-600 color-8F97B5">
+				<div class="d-flex fs-16 fw-600 color-8F97B5">
 					语言 ：
-					<div class="fs-18 fw-600 color-8F97B5" v-for="(lang, index) in lady.language" :key="index">
+					<div class="fs-16 fw-600 color-8F97B5" v-for="(lang, index) in lady.language" :key="index">
 						{{ lang[this.$i18n.locale] }}
 						<span v-if="index < lady.language.length - 1">, </span>
 					</div>
@@ -42,24 +42,25 @@
 			</div>
 		</div>
 
-		<div class="fs-16 fw-400 color-8F97B5 LH-30 mt-1">
+		<div class="fs-16 fw-400 color-8F97B5 LH-30 mt-3">
 			简介：{{ lady.Description[this.$i18n.locale] }}
 		</div>
 
 		<!-- Image List -->
+		<div class="mt-2">
+			<div class="mt-3" v-for="(Image, Index) in lady.ImageList.slice(1, 4)" :key="Index" style="height: 60vh	;">
 
-		<div class="mt-half">
-			<div class="mt-1" v-for="(Image, Index) in lady.ImageList.slice(1, 4)" :key="Index" style="height: 400px;">
-				<img :src="Image" style="width: 100%; height: 100%; object-fit: cover;" alt="Lady Image">
+				<img v-lazy="Image" style="width: 100%; height: 100%; object-fit: cover;" alt="Lady Image">
+
 			</div>
 		</div>
 
 		<!-- Chat Button -->
 		<a href="https://t.me/nightmus3" style="text-decoration: none;">
-			<div class="mt-1">
+			<div class="mt-3">
 				<div class="w-full">
 					<div class="bg-FEC72E br-11 pointer Chat_Button" style="padding: 8px 0;">
-						<div class="flex flex-center align-center">
+						<div class="d-flex justify-content-center  align-items-center">
 							<div class="fs-24 fw-700 color-1E233A">
 								和我聊天吧
 							</div>
@@ -79,19 +80,21 @@
 				</div>
 			</div>
 
-			<div class="Ladies_Display_Container bg-394264 br-13 pt-half px-half pb-half mx-auto mt-half mb-half">
-				<div class="Ladies_Display grid grid-center flex-center">
-					<div v-for="(lady, index) in randomLadiesList" :key="index"
-						class="gallery-item bg-1E233A br-12 flex flex-column pointer"
-						style="height: 250px; width: 100%; max-width: 200px; overflow: hidden;"
-						@click="goToLadyProfile(ladyIndexMap[index])">
-						<img style="width: 100%; max-width: 200px; height: 80%; object-fit: cover;"
-							:src="`/images/Ladies_Gallery/${ladyIndexMap[index] + 1}/1.webp`"
-							:alt="`Cover image for folder ${ladyIndexMap[index] + 1}`" />
-						<div class="Info flex flex-center align-center color-white fs-18 fw-700" style="height: 20%;">
-							<!-- Display the name and age based on the current locale -->
-							{{ lady.name[this.$i18n.locale] }}, {{ lady.age }}
+			<div class="Ladies_Display_Container bg-394264 br-13 pt-half px-half pb-half mx-auto mt-2 mb-half">
+				<div class="Ladies_Display row g-2 ">
+					<div v-for="(lady, index) in randomLadiesList" :key="index" class="gallery-item col-6 pointer"
+						style=" overflow: hidden;" @click="goToLadyProfile(ladyIndexMap[index])">
+
+						<div class="bg-1E233A br-12 d-flex flex-column h-100">
+							<img style="width: 100%; height: 80%; object-fit: cover; border-top-left-radius: 12px; border-top-right-radius: 12px"
+								v-lazy="lady.ImageList[0]" alt="Cover image" />
+							<div class="Info d-flex justify-content-center  align-items-center color-white fs-18 fw-700"
+								style="height: 20%;">
+								<!-- Display the name and age based on the current locale -->
+								{{ lady.name[this.$i18n.locale] }}, {{ lady.age }}
+							</div>
 						</div>
+
 					</div>
 				</div>
 			</div>
@@ -176,11 +179,6 @@ export default {
 
 
 <style scoped>
-.Ladies_Display {
-	grid-template-columns: repeat(2, 1fr);
-	grid-gap: 12px;
-}
-
 .Chat_Button {
 	transition: 0.5s;
 }

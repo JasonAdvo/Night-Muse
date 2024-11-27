@@ -1,9 +1,9 @@
 <template>
-	<div class="Topbar flex flex-between align-center px-1 bg-394264">
+	<div class="Topbar d-flex justify-content-between align-items-center px-3 bg-394264">
 		<!-- Sidebar -->
 		<div id="mySidenav" class="bg-1E233A" :class="['sidenav', { open: isOpen }]">
 			<div class="px-2">
-				<div class="flex gap-10 mb-1">
+				<div class="d-flex gap-10 mb-1">
 					<img src="/images/Logo.svg" alt="Logo">
 					<img src="/images/Logo_Text.svg" alt="Logo Title">
 				</div>
@@ -23,8 +23,8 @@
 		<div class="overlay" v-if="isOpen" @click="toggleNav"></div>
 
 		<!-- Open Button -->
-		<span class="flex flex-center align-center" style="font-size: 30px; cursor: pointer; width: 40px;"
-			@click="toggleNav">
+		<span class="d-flex justify-content-center  align-items-center"
+			style="font-size: 30px; cursor: pointer; width: 40px;" @click="toggleNav">
 			<img style="width: 30px; height: 30px;" :src="menuIcon" alt="Menu Icon">
 		</span>
 

@@ -7,7 +7,7 @@
 
 				<div class="absolute w-80" style="left: 50%; transform: translateX(-50%); bottom: 35px">
 					<div @click.self="closePopup"
-						class="bg-EC404B br-7 flex flex-center align-center color-white fs-16 fw-400 pointer"
+						class="bg-EC404B br-7 d-flex justify-content-center  align-items-center color-white fs-16 fw-400 pointer"
 						style="padding: 6px 0;">
 						进入
 					</div>
