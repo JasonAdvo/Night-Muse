@@ -51,15 +51,13 @@
 								<!-- Display the name and age based on the current locale -->
 								{{ lady.name[this.$i18n.locale] }}, {{ lady.age }}
 							</div>
-
-
 						</div>
 					</div>
 				</div>
 
 				<div class="mt-3">
 					<router-link to="/ladiesPage" style="text-decoration: none;">
-						<div class="More_Button bg-FEB92E br-6 d-flex justify-content-center  align-items-center"
+						<div class="More_Button bg-FEB92E br-6 d-flex justify-content-center align-items-center"
 							style="height: 34px;">
 							<div class="color-1E233A fs-16 fw-700">
 								更多佳丽
@@ -90,10 +88,8 @@ export default {
 			randomLadiesList: [],
 		}
 	},
-
 	mounted() {
 		this.shuffleLadiesList();
-		// console.log(this.Ladies)
 	},
 	methods: {
 		goToLadyProfile(index) {
@@ -105,26 +101,16 @@ export default {
 		shuffleLadiesList() {
 			const first50Ladies = this.Ladies.slice(0, 50); // Take the first 50 ladies
 
+			// Shuffle the array using sort and random comparator
+			const shuffledLadies = first50Ladies.sort(() => Math.random() - 0.5);
 
-			const shuffledLadies = this.shuffleArray(first50Ladies); // Shuffle the filtered list
-
-			const selectedLadies = shuffledLadies.slice(0, 20); // Take the first 4 after shuffle
+			// Take the first 20 from the shuffled list
+			const selectedLadies = shuffledLadies.slice(0, 20);
 
 			// Map the original indices of the selected ladies
-			this.ladyIndexMap = selectedLadies.map(lady =>
-				this.Ladies.indexOf(lady)
-			);
+			this.ladyIndexMap = selectedLadies.map(lady => this.Ladies.indexOf(lady));
 
 			this.randomLadiesList = selectedLadies; // Store the new shuffled list
-		},
-		// Shuffle the array using Fisher-Yates shuffle algorithm
-		shuffleArray(array) {
-			let shuffledArray = array.slice(); // Create a copy of the array
-			for (let i = shuffledArray.length - 1; i > 0; i--) {
-				const j = Math.floor(Math.random() * (i + 1));
-				[shuffledArray[i], shuffledArray[j]] = [shuffledArray[j], shuffledArray[i]]; // Swap elements
-			}
-			return shuffledArray;
 		}
 	}
 };
