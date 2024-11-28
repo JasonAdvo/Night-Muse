@@ -142,11 +142,17 @@ export default {
 			// Exclude the previously selected lady
 			const filteredLadies = first50Ladies.filter((_, index) => index !== this.previousIndex);
 
-			// Shuffle the array using sort and random comparator
-			const shuffledLadies = filteredLadies.sort(() => Math.random() - 0.5);
+			// Fisher-Yates shuffle
+			for (let i = filteredLadies.length - 1; i > 0; i--) {
+				// Generate a random index between 0 and i
+				const j = Math.floor(Math.random() * (i + 1));
+
+				// Swap the elements at i and j
+				[filteredLadies[i], filteredLadies[j]] = [filteredLadies[j], filteredLadies[i]];
+			}
 
 			// Take the first 4 from the shuffled list
-			const selectedLadies = shuffledLadies.slice(0, 4);
+			const selectedLadies = filteredLadies.slice(0, 4);
 
 			// Map the original indices of the selected ladies
 			this.ladyIndexMap = selectedLadies.map(lady => this.Ladies.indexOf(lady));

@@ -59,13 +59,19 @@ export default {
 		shuffleLadiesList() {
 			const first50Ladies = this.Ladies.slice(0, 50); // Take the first 50 ladies
 
-			// Shuffle the array using sort and random comparator
-			const shuffledLadies = first50Ladies.sort(() => Math.random() - 0.5);
+			// Fisher-Yates shuffle
+			for (let i = first50Ladies.length - 1; i > 0; i--) {
+				// Generate a random index between 0 and i
+				const j = Math.floor(Math.random() * (i + 1));
+
+				// Swap elements at i and j
+				[first50Ladies[i], first50Ladies[j]] = [first50Ladies[j], first50Ladies[i]];
+			}
 
 			// Map the original indices of the selected ladies
-			this.ladyIndexMap = shuffledLadies.map(lady => this.Ladies.indexOf(lady));
+			this.ladyIndexMap = first50Ladies.map(lady => this.Ladies.indexOf(lady));
 
-			this.randomLadiesList = shuffledLadies; // Store the new shuffled list
+			this.randomLadiesList = first50Ladies; // Store the new shuffled list
 		}
 	}
 };
