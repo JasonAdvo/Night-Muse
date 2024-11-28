@@ -2,8 +2,8 @@
 	<div class="Topbar d-flex justify-content-between align-items-center px-3 bg-394264">
 		<!-- Sidebar -->
 		<div id="mySidenav" class="bg-1E233A" :class="['sidenav', { open: isOpen }]">
-			<div class="px-2">
-				<div class="d-flex gap-10 mb-1">
+			<div class="px-4">
+				<div class="d-flex gap-10 mb-3">
 					<img src="/images/Logo.svg" alt="Logo">
 					<img src="/images/Logo_Text.svg" alt="Logo Title">
 				</div>

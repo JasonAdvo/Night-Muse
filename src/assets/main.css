@@ -7,63 +7,9 @@ body {
 }
 
 #app {
-	/* max-width: 1280px; */
-	/* margin: 0 auto; */
-	/* padding: 2rem; */
 	font-weight: normal;
 }
 
-/* Position CSS */
-.relative {
-	position: relative;
-}
-
-.absolute {
-	position: absolute;
-}
-
-/* Flex CSS */
-.gap-5 {
-	gap: 5px;
-}
-
-.gap-10 {
-	gap: 10px;
-}
-
-/* Grid CSS */
-.grid {
-	display: grid;
-}
-
-/* Padding CSS */
-.px-half {
-	padding: 0 .5rem;
-}
-
-.px-2 {
-	padding: 0 2rem;
-}
-
-.pt-half {
-	padding-top: .5rem;
-}
-
-.pt-1 {
-	padding-top: 1rem;
-}
-
-.pt-1-half {
-	padding-top: 1.5rem;
-}
-
-.pt-2 {
-	padding-top: 2rem;
-}
-
-.pb-half {
-	padding-bottom: 0.5rem;
-}
 
 /* Background CSS */
 .bg-394264 {
@@ -84,6 +30,15 @@ body {
 
 .bg-EC404B {
 	background: #EC404B;
+}
+
+/* Border CSS */
+.bb-1-sidebar {
+	border-bottom: 2px solid rgba(143, 151, 181, 0.20);
+}
+
+.bt-1-sidebar {
+	border-top: 2px solid rgba(143, 151, 181, 0.20);
 }
 
 /* Border Radius CSS */
@@ -111,26 +66,14 @@ body {
 	border-radius: 13px;
 }
 
-/* Text CSS */
-.text-center {
-	text-align: center;
+/* Cursor CSS */
+.pointer {
+	cursor: pointer;
 }
 
-.LH-30 {
-	line-height: 30px;
-}
-
-/* Text Color CSS */
-.color-white {
-	color: #FFF;
-}
-
-.color-1E233A {
-	color: #1E233A;
-}
-
-.color-8F97B5 {
-	color: #8F97B5;
+/* Flex CSS */
+.gap-10 {
+	gap: 10px;
 }
 
 /* Font Size CSS */
@@ -168,37 +111,65 @@ body {
 	margin-top: 1.5rem;
 }
 
-.mt-2 {
-	margin-top: 2rem;
-}
-
 .mb-half {
 	margin-bottom: 0.5rem;
 }
 
-.mb-1 {
-	margin-bottom: 1rem;
+/* Padding CSS */
+.px-half {
+	padding: 0 .5rem;
 }
 
-.mb-2 {
-	margin-bottom: 2rem;
+.pt-half {
+	padding-top: .5rem;
+}
+
+.pt-1-half {
+	padding-top: 1.5rem;
+}
+
+.pb-half {
+	padding-bottom: 0.5rem;
+}
+
+/* Position CSS */
+.relative {
+	position: relative;
+}
+
+.absolute {
+	position: absolute;
+}
+
+/* Text Color CSS */
+.color-white {
+	color: #FFF;
+}
+
+.color-1E233A {
+	color: #1E233A;
+}
+
+.color-8F97B5 {
+	color: #8F97B5;
+}
+
+/* Text CSS */
+.text-center {
+	text-align: center;
+}
+
+.LH-30 {
+	line-height: 30px;
 }
 
 /* Width */
-.w-full {
-	width: 100%;
-}
-
 .w-48 {
 	width: 48%;
 }
 
 .w-49 {
 	width: 49%;
-}
-
-.w-50 {
-	width: 50%;
 }
 
 .w-80 {
@@ -208,30 +179,3 @@ body {
 .mw-300 {
 	max-width: 300px;
 }
-
-/* Cursor CSS */
-.pointer {
-	cursor: pointer;
-}
-
-/* Border CSS */
-.bb-1-sidebar {
-	border-bottom: 2px solid rgba(143, 151, 181, 0.20);
-}
-
-.bt-1-sidebar {
-	border-top: 2px solid rgba(143, 151, 181, 0.20);
-}
-
-
-
-
-
-/* @media (min-width: 1024px) {
-
-	#app {
-		display: grid;
-		grid-template-columns: 1fr 1fr;
-		padding: 0 2rem;
-	}
-} */

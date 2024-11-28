@@ -3,9 +3,9 @@
 		<topBar />
 	</div>
 
-	<section class="mt-2">
+	<section class="mt-4">
 		<div class="Main_Page_Ladies_Section px-3">
-			<div class="Ladies_Display_Container bg-394264 br-13 pt-half px-half pb-half mx-auto mt-2 mb-half">
+			<div class="Ladies_Display_Container bg-394264 br-13 pt-half px-half pb-half mx-auto mt-4 mb-half">
 				<div class="Ladies_Display row g-2">
 					<div v-for="(lady, index) in randomLadiesList" :key="index"
 						class="gallery-item col-6 col-sm-4 col-md-3 col-lg-2 pointer" style=" overflow: hidden;"

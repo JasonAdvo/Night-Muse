@@ -17,7 +17,7 @@
 			</div>
 
 			<a href="https://t.me/nightmus3" style="text-decoration: none;">
-				<div class="Chat_Button bg-FEB92E br-6 d-flex justify-content-center  align-items-center mt-2 pointer"
+				<div class="Chat_Button bg-FEB92E br-6 d-flex justify-content-center  align-items-center mt-4 pointer"
 					style="width: 170px; height: 34px;">
 					<div class="color-1E233A fs-16 fw-700">
 						{{ $t('Main_Page.Chat') }}
@@ -28,15 +28,15 @@
 		</div>
 	</section>
 
-	<section class="mt-2	">
+	<section class="mt-4	">
 		<div class="Main_Page_Ladies_Section px-3">
-			<div class="w-full bg-1E233A" style="position: sticky; top: 60px;">
+			<div class="w-100 bg-1E233A" style="position: sticky; top: 60px;">
 				<div class=" color-8F97B5 fs-24 fw-800 text-center">
 					{{ $t('Main_Page.Today_Ladies') }}
 				</div>
 			</div>
 
-			<div class="Ladies_Display_Container bg-394264 br-13 pt-half px-half pb-half mx-auto mt-2 mb-half">
+			<div class="Ladies_Display_Container bg-394264 br-13 pt-half px-half pb-half mx-auto mt-4 mb-half">
 				<div class="Ladies_Display row g-2">
 					<div v-for="(lady, index) in randomLadiesList" :key="index"
 						class="gallery-item col-6 col-sm-4 col-md-3 col-lg-2 pointer" style="overflow: hidden;"

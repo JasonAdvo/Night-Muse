@@ -3,7 +3,7 @@
 		<!-- Overlay and Pop-up -->
 		<div v-if="currentPopUpState" class="overlay" @click.self="closePopup">
 			<div class="popup relative">
-				<img class="w-full" src="/images/Pop_Up.webp" alt="Pop up Banner-Night Muse">
+				<img class="w-100" src="/images/Pop_Up.webp" alt="Pop up Banner-Night Muse">
 
 				<div class="absolute w-80" style="left: 50%; transform: translateX(-50%); bottom: 35px">
 					<div @click.self="closePopup"

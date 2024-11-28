@@ -47,7 +47,7 @@
 		</div>
 
 		<!-- Image List -->
-		<div class="mt-2">
+		<div class="mt-4">
 			<div class="mt-3" v-for="(Image, Index) in lady.ImageList.slice(1, 4)" :key="Index" style="height: 60vh	;">
 
 				<img v-lazy="Image" style="width: 100%; height: 100%; object-fit: cover;" alt="Lady Image">
@@ -58,7 +58,7 @@
 		<!-- Chat Button -->
 		<a href="https://t.me/nightmus3" style="text-decoration: none;">
 			<div class="mt-3">
-				<div class="w-full">
+				<div class="w-100">
 					<div class="bg-FEC72E br-11 pointer Chat_Button" style="padding: 8px 0;">
 						<div class="d-flex justify-content-center  align-items-center">
 							<div class="fs-24 fw-700 color-1E233A">
@@ -71,8 +71,8 @@
 		</a>
 
 		<!-- 热门推荐 -->
-		<div class="mt-2">
-			<div class="w-full">
+		<div class="mt-4">
+			<div class="w-100">
 				<div class="text-center">
 					<div class="color-8F97B5 fs-24 fw-800">
 						热门推荐
@@ -80,7 +80,7 @@
 				</div>
 			</div>
 
-			<div class="Ladies_Display_Container bg-394264 br-13 pt-half px-half pb-half mx-auto mt-2 mb-half">
+			<div class="Ladies_Display_Container bg-394264 br-13 pt-half px-half pb-half mx-auto mt-4 mb-half">
 				<div class="Ladies_Display row g-2 ">
 					<div v-for="(lady, index) in randomLadiesList" :key="index" class="gallery-item col-6 pointer"
 						style=" overflow: hidden;" @click="goToLadyProfile(ladyIndexMap[index])">
