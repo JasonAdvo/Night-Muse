@@ -5,16 +5,16 @@
 
 	<div class="px-3 pt-1-half mx-auto" style="min-height: 100vh; max-width: 500px;">
 
-		<div class="d-flex justify-content-between">
+		<div class="d-flex justify-content-between" style="height: 250px;">
 
-			<div class="w-48" style="height: 250px;">
+			<div class="w-48">
 
 				<img v-lazy="lady.ImageList[0]" class="br-8" alt="Cover image"
 					style="width: 100%; height: 100%; object-fit: cover;" />
 
 			</div>
 
-			<div class="w-48 d-flex flex-column justify-content-between" style="height: 250px;">
+			<div class="w-48 d-flex flex-column justify-content-between">
 
 				<div class="fs-16 fw-600 color-8F97B5">
 					名字 ：{{ lady.name[this.$i18n.locale] }} ( {{ lady.name['en'] }} )
