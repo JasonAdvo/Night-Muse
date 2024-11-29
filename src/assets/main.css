@@ -10,7 +10,6 @@ body {
 	font-weight: normal;
 }
 
-
 /* Background CSS */
 .bg-394264 {
 	background: #394264;
@@ -116,15 +115,6 @@ body {
 	padding-bottom: 0.5rem;
 }
 
-/* Position CSS */
-.relative {
-	position: relative;
-}
-
-.absolute {
-	position: absolute;
-}
-
 /* Text Color CSS */
 .color-white {
 	color: #FFF;
@@ -139,10 +129,6 @@ body {
 }
 
 /* Text CSS */
-.text-center {
-	text-align: center;
-}
-
 .LH-30 {
 	line-height: 30px;
 }
