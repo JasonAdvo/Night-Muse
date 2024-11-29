@@ -1,5 +1,5 @@
 <template>
-	<div class="position-sticky top-0" style="z-index: 10;">
+	<div class="sticky-top" style="z-index: 10;">
 		<topBar />
 	</div>
 
