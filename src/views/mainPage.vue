@@ -8,7 +8,8 @@
 	</div>
 
 	<div v-if="currentAdsState" class="Btm-Popup_Container" style="width: 100px; z-index: 10;">
-		<i class="ic-close-circle fas fa-times-circle" @click="closePopup"></i>
+		<i class="ic-close-circle fas fa-times-circle d-flex justify-content-center rounded-circle top-0 pointer"
+			@click="closePopup"></i>
 		<a :href="'http://t.me/sweetchat20'">
 			<img class="w-100" src="/images/758 Gaming.webp" alt="Join Us Now">
 		</a>
@@ -218,17 +219,10 @@ export default {
 }
 
 .ic-close-circle {
-	display: flex;
-	justify-content: center;
-	/* border: 2px solid #fff; */
-	border-radius: 100%;
 	padding: 4px;
 	width: 20px;
-	height: 20px;
 	position: absolute;
-	top: 0;
 	right: -15px;
-	cursor: pointer;
 }
 
 .fa-times-circle::before {
