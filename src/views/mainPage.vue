@@ -47,7 +47,7 @@
 			<div class="Ladies_Display_Container bg-394264 rounded-3 pt-half px-half pb-half mx-auto mt-4 mb-half">
 				<div class="Ladies_Display row g-2">
 					<div v-for="(item, index) in adjustedLadiesList" :key="index" :class="item.isFullWidth
-						? 'col-12 pointer overflow-hidden full-width-image-container'
+						? 'col-12 pointer overflow-hidden text-center'
 						: 'gallery-item col-6 col-sm-4 col-md-3 col-lg-2 pointer overflow-hidden'">
 
 						<!-- Full-width image row -->
