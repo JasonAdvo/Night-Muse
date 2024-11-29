@@ -1,5 +1,5 @@
 <template>
-	<div style="position: sticky; top: 0; z-index: 10;">
+	<div class="position-sticky top-0" style="z-index: 10;">
 		<topBar />
 	</div>
 
@@ -24,7 +24,7 @@
 							<img class="rounded-top-3 w-100" v-lazy="item.lady.ImageList[0]" alt="Cover image"
 								style="height: 80%; object-fit: cover;" />
 
-							<div class="Info d-flex justify-content-center align-items-center color-white fs-18 fw-700"
+							<div class="Info d-flex justify-content-center align-items-center color-white fs-18 fw-bold"
 								style="height: 20%;">
 								{{ item.lady.name[this.$i18n.locale] }}, {{ item.lady.age }}
 							</div>

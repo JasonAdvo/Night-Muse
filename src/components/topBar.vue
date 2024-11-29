@@ -23,14 +23,14 @@
 		<div class="overlay w-100 h-100" v-if="isOpen" @click="toggleNav"></div>
 
 		<!-- Open Button -->
-		<span class="d-flex justify-content-center  align-items-center"
-			style="font-size: 30px; cursor: pointer; width: 40px;" @click="toggleNav">
+		<span class="d-flex justify-content-center  align-items-center pointer" style="font-size: 30px; width: 40px;"
+			@click="toggleNav">
 			<img style="width: 30px; height: 30px;" :src="menuIcon" alt="Menu Icon">
 		</span>
 
 		<!-- Page Title -->
 		<div class="Page_Title mx-auto">
-			<span class="color-white fs-24 fw-800">
+			<span class="color-white fs-24 fw-bolder">
 				{{ currentPageTitle }}
 			</span>
 		</div>

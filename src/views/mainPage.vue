@@ -3,7 +3,7 @@
 		<popUp />
 	</div>
 
-	<div style="position: sticky; top: 0; z-index: 11;">
+	<div class="position-sticky top-0" style="z-index: 11;">
 		<topBar />
 	</div>
 
@@ -20,14 +20,14 @@
 
 			<img src="/images/Main_Page_Logo_Text.svg" alt="Main Page Logo Text">
 
-			<div class="color-1E233A fs-22 fw-800 mt-3">
+			<div class="color-1E233A fs-22 fw-bolder mt-3">
 				{{ $t('Main_Page.Special') }}
 			</div>
 
-			<a href="https://t.me/nightmus3" style="text-decoration: none;">
+			<a class="text-decoration-none" href="https://t.me/nightmus3">
 				<div class="Chat_Button bg-FEB92E br-6 d-flex justify-content-center align-items-center mt-4 pointer"
 					style="width: 170px; height: 34px;">
-					<div class="color-1E233A fs-16 fw-700">
+					<div class="color-1E233A fs-16 fw-bold">
 						{{ $t('Main_Page.Chat') }}
 					</div>
 				</div>
@@ -38,8 +38,8 @@
 
 	<section class="mt-4">
 		<div class="Main_Page_Ladies_Section px-3">
-			<div class="w-100 bg-1E233A" style="position: sticky; top: 60px;">
-				<div class=" color-8F97B5 fs-24 fw-800 text-center">
+			<div class="w-100 bg-1E233A position-sticky" style="top: 60px;">
+				<div class=" color-8F97B5 fs-24 fw-bolder text-center">
 					{{ $t('Main_Page.Today_Ladies') }}
 				</div>
 			</div>
@@ -63,7 +63,7 @@
 							<img class="rounded-top-3 w-100" v-lazy="item.lady.ImageList[0]" alt="Cover image"
 								style="height: 80%; object-fit: cover;" />
 
-							<div class="Info d-flex justify-content-center align-items-center color-white fs-18 fw-700"
+							<div class="Info d-flex justify-content-center align-items-center color-white fs-18 fw-bold"
 								style="height: 20%;">
 								{{ item.lady.name[this.$i18n.locale] }}, {{ item.lady.age }}
 							</div>
@@ -72,10 +72,10 @@
 				</div>
 
 				<div class="mt-3">
-					<router-link to="/ladiesPage" style="text-decoration: none;">
+					<router-link to="/ladiesPage" class="text-decoration-none">
 						<div class="More_Button bg-FEB92E br-6 d-flex justify-content-center align-items-center"
 							style="height: 34px;">
-							<div class="color-1E233A fs-16 fw-700">
+							<div class="color-1E233A fs-16 fw-bold">
 								更多佳丽
 							</div>
 						</div>

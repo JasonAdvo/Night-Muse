@@ -1,9 +1,9 @@
 <template>
-	<div style="position: sticky; top: 0; z-index: 10;">
+	<div class="position-sticky top-0" style="z-index: 10;">
 		<topBar />
 	</div>
 
-	<div class="px-3 pt-1-half mx-auto" style="min-height: 100vh; max-width: 500px;">
+	<div class="px-3 pt-1-half mx-auto min-vh-100" style="max-width: 500px;">
 
 		<div class="d-flex justify-content-between" style="height: 250px;">
 
@@ -55,12 +55,12 @@
 		</div>
 
 		<!-- Chat Button -->
-		<a href="https://t.me/nightmus3" style="text-decoration: none;">
+		<a class="text-decoration-none" href="https://t.me/nightmus3">
 			<div class="mt-3">
 				<div class="w-100">
 					<div class="bg-FEC72E rounded-3 pointer Chat_Button" style="padding: 8px 0;">
 						<div class="d-flex justify-content-center  align-items-center">
-							<div class="fs-24 fw-700 color-1E233A">
+							<div class="fs-24 fw-bold color-1E233A">
 								和我聊天吧
 							</div>
 						</div>
@@ -73,7 +73,7 @@
 		<div class="mt-4">
 			<div class="w-100">
 				<div class="text-center">
-					<div class="color-8F97B5 fs-24 fw-800">
+					<div class="color-8F97B5 fs-24 fw-bolder">
 						热门推荐
 					</div>
 				</div>
@@ -88,7 +88,7 @@
 						<div class="bg-1E233A rounded-3 d-flex flex-column h-100">
 							<img class="rounded-top-3 w-100" style="height: 80%; object-fit: cover;"
 								v-lazy="lady.ImageList[0]" alt="Cover image" />
-							<div class="Info d-flex justify-content-center  align-items-center color-white fs-18 fw-700"
+							<div class="Info d-flex justify-content-center  align-items-center color-white fs-18 fw-bold"
 								style="height: 20%;">
 								<!-- Display the name and age based on the current locale -->
 								{{ lady.name[this.$i18n.locale] }}, {{ lady.age }}
