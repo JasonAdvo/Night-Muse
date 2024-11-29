@@ -7,7 +7,7 @@
 		<topBar />
 	</div>
 
-	<div v-if="currentAdsState" class="Btm-Popup_Container" style="width: 100px; z-index: 10;">
+	<div v-if="currentAdsState" class="Btm-Popup_Container start-0" style="width: 100px; z-index: 10;">
 		<i class="ic-close-circle fas fa-times-circle d-flex justify-content-center rounded-circle top-0 pointer"
 			@click="closePopup"></i>
 		<a :href="'http://t.me/sweetchat20'">
@@ -213,7 +213,6 @@ export default {
 
 .Btm-Popup_Container {
 	position: fixed;
-	left: 0;
 	bottom: 20px;
 	padding-top: 20px;
 }

@@ -20,7 +20,7 @@
 		</div>
 
 		<!-- Overlay -->
-		<div class="overlay w-100" v-if="isOpen" @click="toggleNav"></div>
+		<div class="overlay start-0 w-100" v-if="isOpen" @click="toggleNav"></div>
 
 		<!-- Open Button -->
 		<span class="d-flex justify-content-center  align-items-center pointer" style="font-size: 30px; width: 40px;"
@@ -191,7 +191,6 @@ body {
 .overlay {
 	position: fixed;
 	bottom: 0;
-	left: 0;
 	background: rgba(0, 0, 0, 0.5);
 	z-index: 998;
 	height: calc(100% - 60px);

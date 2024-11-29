@@ -7,7 +7,7 @@
 			<div class="popup position-relative">
 				<img class="w-100" src="/images/Pop_Up.webp" alt="Pop up Banner-Night Muse">
 
-				<div class="position-absolute w-80 translate-middle-x" style="left: 50%; bottom: 35px">
+				<div class="position-absolute w-80 start-50 translate-middle-x" style="bottom: 35px">
 					<div @click.self="closePopup"
 						class="bg-EC404B br-7 d-flex justify-content-center  align-items-center color-white fs-16 fw-400 pointer"
 						style="padding: 6px 0;">
