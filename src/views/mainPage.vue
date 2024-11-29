@@ -120,9 +120,9 @@ export default {
 
 			// Dynamically determine current breakpoint
 			const getBreakpoint = () => {
-				if (window.matchMedia('(min-width: 1200px)').matches) return 'lg';
-				if (window.matchMedia('(min-width: 992px)').matches) return 'md';
-				if (window.matchMedia('(min-width: 768px)').matches) return 'sm';
+				if (window.matchMedia('(min-width: 992px)').matches) return 'lg';
+				if (window.matchMedia('(min-width: 768px)').matches) return 'md';
+				if (window.matchMedia('(min-width: 576px)').matches) return 'sm';
 				return 'xs';
 			};
 
