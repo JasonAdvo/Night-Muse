@@ -8,7 +8,7 @@
 	</div>
 
 	<section class="mt-2">
-		<div class="Main_Page_Top_Section w-100 d-flex flex-column justify-content-center  align-items-center">
+		<div class="Main_Page_Top_Section w-100 d-flex flex-column justify-content-center align-items-center">
 
 			<img src="/images/Main_Page_Logo_Text.svg" alt="Main Page Logo Text">
 
@@ -17,7 +17,7 @@
 			</div>
 
 			<a href="https://t.me/nightmus3" style="text-decoration: none;">
-				<div class="Chat_Button bg-FEB92E br-6 d-flex justify-content-center  align-items-center mt-4 pointer"
+				<div class="Chat_Button bg-FEB92E br-6 d-flex justify-content-center align-items-center mt-4 pointer"
 					style="width: 170px; height: 34px;">
 					<div class="color-1E233A fs-16 fw-700">
 						{{ $t('Main_Page.Chat') }}
@@ -36,13 +36,13 @@
 				</div>
 			</div>
 
-			<div class="Ladies_Display_Container bg-394264 br-13 pt-half px-half pb-half mx-auto mt-4 mb-half">
+			<div class="Ladies_Display_Container bg-394264 rounded-3 pt-half px-half pb-half mx-auto mt-4 mb-half">
 				<div class="Ladies_Display row g-2">
 					<div v-for="(lady, index) in randomLadiesList" :key="index"
 						class="gallery-item col-6 col-sm-4 col-md-3 col-lg-2 pointer overflow-hidden"
 						@click="goToLadyProfile(ladyIndexMap[index])">
 
-						<div class="bg-1E233A br-12 d-flex flex-column h-100">
+						<div class="bg-1E233A rounded-3 d-flex flex-column h-100">
 							<img class="rounded-top-3 w-100" v-lazy="lady.ImageList[0]" alt="Cover image"
 								style="height: 80%; object-fit: cover;" />
 

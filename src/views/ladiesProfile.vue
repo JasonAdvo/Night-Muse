@@ -58,7 +58,7 @@
 		<a href="https://t.me/nightmus3" style="text-decoration: none;">
 			<div class="mt-3">
 				<div class="w-100">
-					<div class="bg-FEC72E br-11 pointer Chat_Button" style="padding: 8px 0;">
+					<div class="bg-FEC72E rounded-3 pointer Chat_Button" style="padding: 8px 0;">
 						<div class="d-flex justify-content-center  align-items-center">
 							<div class="fs-24 fw-700 color-1E233A">
 								和我聊天吧
@@ -79,13 +79,13 @@
 				</div>
 			</div>
 
-			<div class="Ladies_Display_Container bg-394264 br-13 pt-half px-half pb-half mx-auto mt-4 mb-half">
+			<div class="Ladies_Display_Container bg-394264 rounded-3 pt-half px-half pb-half mx-auto mt-4 mb-half">
 				<div class="Ladies_Display row g-2 ">
 					<div v-for="(lady, index) in randomLadiesList" :key="index"
 						class="gallery-item col-6 pointer overflow-hidden"
 						@click="goToLadyProfile(ladyIndexMap[index])">
 
-						<div class="bg-1E233A br-12 d-flex flex-column h-100">
+						<div class="bg-1E233A rounded-3 d-flex flex-column h-100">
 							<img class="rounded-top-3 w-100" style="height: 80%; object-fit: cover;"
 								v-lazy="lady.ImageList[0]" alt="Cover image" />
 							<div class="Info d-flex justify-content-center  align-items-center color-white fs-18 fw-700"
