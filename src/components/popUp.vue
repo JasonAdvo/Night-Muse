@@ -25,11 +25,6 @@ import { mapGetters } from 'vuex';
 
 export default {
 	name: 'PopupOverlay',
-	data() {
-		return {
-			// isPopupVisible: true // Set to true to show the pop-up on page load
-		};
-	},
 	computed: {
 		...mapGetters(['currentPopUpState'])
 	},

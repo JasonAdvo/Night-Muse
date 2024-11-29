@@ -6,7 +6,8 @@ const store = createStore({
 		isLadiesProfile: JSON.parse(localStorage.getItem('isLadiesProfile')) || false, // Keeps track of whether we're on a lady's profile
 		menuIcon: localStorage.getItem('menuIcon') || '/images/Menu.webp', // Default menu icon
 		backImage: '/images/Back.svg', // Back icon for ladies profile
-		isPopupVisible: true
+		isPopupVisible: true,
+		isAdsVisible: true
 	},
 	mutations: {
 		// Toggle the state of isLadiesProfile and update the menuIcon accordingly
@@ -23,6 +24,9 @@ const store = createStore({
 		},
 		setPopUpState(state) {
 			state.isPopupVisible = false;
+		},
+		setAdsState(state) {
+			state.isAdsVisible = false;
 		}
 	},
 	actions: {
@@ -36,6 +40,9 @@ const store = createStore({
 		},
 		changePopUpState({ commit }) {
 			commit('setPopUpState')
+		},
+		changeAdsState({ commit }) {
+			commit('setAdsState')
 		}
 	},
 	getters: {
@@ -47,6 +54,9 @@ const store = createStore({
 		},
 		currentPopUpState(state) {
 			return state.isPopupVisible;
+		},
+		currentAdsState(state) {
+			return state.isAdsVisible;
 		}
 	},
 });

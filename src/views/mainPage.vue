@@ -3,8 +3,15 @@
 		<popUp />
 	</div>
 
-	<div style="position: sticky; top: 0; z-index: 10;">
+	<div style="position: sticky; top: 0; z-index: 11;">
 		<topBar />
+	</div>
+
+	<div v-if="currentAdsState" class="Btm-Popup_Container" style="width: 100px; z-index: 10;">
+		<i class="ic-close-circle fas fa-times-circle" @click="closePopup"></i>
+		<a :href="'http://t.me/sweetchat20'">
+			<img class="w-100" src="/images/758 Gaming.webp" alt="Join Us Now">
+		</a>
 	</div>
 
 	<section class="mt-2">
@@ -28,7 +35,7 @@
 		</div>
 	</section>
 
-	<section class="mt-4	">
+	<section class="mt-4">
 		<div class="Main_Page_Ladies_Section px-3">
 			<div class="w-100 bg-1E233A" style="position: sticky; top: 60px;">
 				<div class=" color-8F97B5 fs-24 fw-800 text-center">
@@ -38,18 +45,26 @@
 
 			<div class="Ladies_Display_Container bg-394264 rounded-3 pt-half px-half pb-half mx-auto mt-4 mb-half">
 				<div class="Ladies_Display row g-2">
-					<div v-for="(lady, index) in randomLadiesList" :key="index"
-						class="gallery-item col-6 col-sm-4 col-md-3 col-lg-2 pointer overflow-hidden"
-						@click="goToLadyProfile(ladyIndexMap[index])">
+					<div v-for="(item, index) in adjustedLadiesList" :key="index" :class="item.isFullWidth
+						? 'col-12 pointer overflow-hidden full-width-image-container'
+						: 'gallery-item col-6 col-sm-4 col-md-3 col-lg-2 pointer overflow-hidden'">
 
-						<div class="bg-1E233A rounded-3 d-flex flex-column h-100">
-							<img class="rounded-top-3 w-100" v-lazy="lady.ImageList[0]" alt="Cover image"
+						<!-- Full-width image row -->
+						<div v-if="item.isFullWidth" class="full-width-image rounded-3">
+							<a :href="'http://t.me/sweetchat20'" target="_blank">
+								<img :src="item.image" alt="Ads Image" class="w-100 rounded-3" />
+							</a>
+						</div>
+
+						<!-- Normal lady info and image -->
+						<div v-else class="bg-1E233A rounded-3 d-flex flex-column h-100"
+							@click="goToLadyProfile(item.index)">
+							<img class="rounded-top-3 w-100" v-lazy="item.lady.ImageList[0]" alt="Cover image"
 								style="height: 80%; object-fit: cover;" />
 
 							<div class="Info d-flex justify-content-center align-items-center color-white fs-18 fw-700"
 								style="height: 20%;">
-								<!-- Display the name and age based on the current locale -->
-								{{ lady.name[this.$i18n.locale] }}, {{ lady.age }}
+								{{ item.lady.name[this.$i18n.locale] }}, {{ item.lady.age }}
 							</div>
 						</div>
 					</div>
@@ -75,6 +90,7 @@
 import topBar from '@/components/topBar.vue';
 import LadiesList from '/src/assets/Ladies/Ladies.json';
 import popUp from '@/components/popUp.vue';
+import { mapGetters } from 'vuex';
 
 export default {
 	components: {
@@ -86,10 +102,53 @@ export default {
 			Ladies: LadiesList, // Make sure Ladies is defined here
 			ladyIndexMap: [],
 			randomLadiesList: [],
+			fullWidthImage: '/images/Announcement Bar.webp',
+			isVisible: true,
 		}
 	},
 	mounted() {
 		this.shuffleLadiesList();
+	},
+	computed: {
+		adjustedLadiesList() {
+			const breakpoints = {
+				xs: 4, // col-6
+				sm: 6, // col-sm-4
+				md: 8, // col-md-3
+				lg: 12, // col-lg-2
+			};
+
+			// Dynamically determine current breakpoint
+			const getBreakpoint = () => {
+				if (window.matchMedia('(min-width: 1200px)').matches) return 'lg';
+				if (window.matchMedia('(min-width: 992px)').matches) return 'md';
+				if (window.matchMedia('(min-width: 768px)').matches) return 'sm';
+				return 'xs';
+			};
+
+			const breakpoint = getBreakpoint();
+			const itemsPerRow = breakpoints[breakpoint];
+
+			const adjustedList = [];
+			this.randomLadiesList.forEach((lady, index) => {
+				adjustedList.push({
+					lady,
+					isFullWidth: false,
+					index: this.ladyIndexMap[index], // Use the original index mapping for correct redirection
+				});
+
+				// After each group of itemsPerRow, insert a full-width image
+				if ((index + 1) % itemsPerRow === 0) {
+					adjustedList.push({
+						isFullWidth: true,
+						image: this.fullWidthImage,
+					});
+				}
+			});
+
+			return adjustedList;
+		},
+		...mapGetters(['currentAdsState'])
 	},
 	methods: {
 		goToLadyProfile(index) {
@@ -116,6 +175,9 @@ export default {
 			this.ladyIndexMap = selectedLadies.map(lady => this.Ladies.indexOf(lady));
 
 			this.randomLadiesList = selectedLadies; // Store the new shuffled list
+		},
+		closePopup() {
+			this.$store.dispatch('changeAdsState');
 		}
 	}
 };
@@ -146,5 +208,31 @@ export default {
 .More_Button:hover {
 	background: rgb(255, 170, 0);
 	transform: scale(1.008);
+}
+
+.Btm-Popup_Container {
+	position: fixed;
+	left: 0;
+	bottom: 20px;
+	padding-top: 20px;
+}
+
+.ic-close-circle {
+	display: flex;
+	justify-content: center;
+	/* border: 2px solid #fff; */
+	border-radius: 100%;
+	padding: 4px;
+	width: 20px;
+	height: 20px;
+	position: absolute;
+	top: 0;
+	right: -15px;
+	cursor: pointer;
+}
+
+.fa-times-circle::before {
+	color: white;
+	font-size: 20px;
 }
 </style>

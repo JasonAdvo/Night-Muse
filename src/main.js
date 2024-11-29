@@ -11,6 +11,7 @@ import './assets/main.css'
 // Import Bootstrap CSS and JS
 import 'bootstrap/dist/css/bootstrap.min.css';
 import 'bootstrap/dist/js/bootstrap.bundle.min.js';
+import '@fortawesome/fontawesome-free/css/all.min.css';
 
 const app = createApp(App)
 
