@@ -50,7 +50,6 @@ export default {
 .overlay {
 	position: fixed;
 	background-color: rgba(0, 0, 0, 0.5);
-	/* Semi-transparent background */
 	z-index: 1000;
 }
 

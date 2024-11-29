@@ -31,7 +31,6 @@
 		<!-- Page Title -->
 		<div class="Page_Title mx-auto">
 			<span class="color-white fs-24 fw-800">
-				<!-- Dynamically change the title based on the current route -->
 				{{ currentPageTitle }}
 			</span>
 		</div>
@@ -56,9 +55,6 @@ export default {
 	data() {
 		return {
 			isOpen: false, // Tracks sidebar state
-			// menuImage: '/images/Menu.webp', // Default menu icon
-			// backImage: '/images/Back.svg', // Back icon for closing
-			// menuIcon: '/images/Menu.webp', // Current icon state
 			selectedLanguage: this.$i18n.locale,
 			Ladies: LadiesList,
 		};
