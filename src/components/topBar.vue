@@ -1,5 +1,5 @@
 <template>
-	<div class="Topbar d-flex justify-content-between align-items-center px-3 bg-394264">
+	<div class="Topbar py-1 color-white d-flex justify-content-between align-items-center px-3 bg-394264">
 		<!-- Sidebar -->
 		<div id="mySidenav" class="bg-1E233A" :class="['sidenav', { open: isOpen }]">
 			<div class="px-4">
@@ -7,20 +7,20 @@
 					<img src="/images/Logo.svg" alt="Logo">
 					<img src="/images/Logo_Text.svg" alt="Logo Title">
 				</div>
-				<router-link to="/" class="bb-1-sidebar bt-1-sidebar">
+				<router-link to="/" class="bb-1-sidebar bt-1-sidebar fs-20 color-8F97B5">
 					{{ $t('Side_Menu.Main') }}
 				</router-link>
-				<router-link to="/ladiesPage" class="bb-1-sidebar">
+				<router-link to="/ladiesPage" class="bb-1-sidebar fs-20 color-8F97B5">
 					{{ $t('Side_Menu.Ladies') }}
 				</router-link>
-				<a href="https://t.me/nightmus3" class="bb-1-sidebar">
+				<a href="https://t.me/nightmus3" class="bb-1-sidebar fs-20 color-8F97B5">
 					{{ $t('Side_Menu.Contact') }}
 				</a>
 			</div>
 		</div>
 
 		<!-- Overlay -->
-		<div class="overlay" v-if="isOpen" @click="toggleNav"></div>
+		<div class="overlay w-100 h-100" v-if="isOpen" @click="toggleNav"></div>
 
 		<!-- Open Button -->
 		<span class="d-flex justify-content-center  align-items-center"
@@ -162,9 +162,6 @@ body {
 
 .Topbar {
 	height: 60px;
-	background-color: #394264;
-	padding: 0 16px;
-	color: white;
 }
 
 .sidenav {
@@ -191,8 +188,6 @@ body {
 .sidenav a {
 	padding: 18px 10px;
 	text-decoration: none;
-	font-size: 20px;
-	color: #8F97B5;
 	display: block;
 	transition: color 0.3s ease;
 }
@@ -201,17 +196,9 @@ body {
 	position: fixed;
 	top: 0;
 	left: 0;
-	width: 100%;
-	height: 100%;
 	background: rgba(0, 0, 0, 0.5);
-	/* Semi-transparent black */
 	z-index: 998;
-	/* Below the navbar */
 }
-
-/* .sidenav a:hover {
-	color: #ffffff;
-} */
 
 .language-dropdown select {
 	border-radius: 15px;

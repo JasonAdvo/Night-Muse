@@ -1,7 +1,9 @@
 <template>
 	<div>
 		<!-- Overlay and Pop-up -->
-		<div v-if="currentPopUpState" class="overlay" @click.self="closePopup">
+		<div v-if="currentPopUpState"
+			class="overlay d-flex justify-content-center align-items-center w-100 h-100 top-0 left-0"
+			@click.self="closePopup">
 			<div class="popup relative">
 				<img class="w-100" src="/images/Pop_Up.webp" alt="Pop up Banner-Night Muse">
 
@@ -52,15 +54,8 @@ export default {
 /* Overlay Style */
 .overlay {
 	position: fixed;
-	top: 0;
-	left: 0;
-	width: 100%;
-	height: 100%;
 	background-color: rgba(0, 0, 0, 0.5);
 	/* Semi-transparent background */
-	display: flex;
-	justify-content: center;
-	align-items: center;
 	z-index: 1000;
 }
 

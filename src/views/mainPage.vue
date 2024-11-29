@@ -8,7 +8,7 @@
 	</div>
 
 	<section class="mt-2">
-		<div class="Main_Page_Top_Section d-flex flex-column justify-content-center  align-items-center">
+		<div class="Main_Page_Top_Section w-100 d-flex flex-column justify-content-center  align-items-center">
 
 			<img src="/images/Main_Page_Logo_Text.svg" alt="Main Page Logo Text">
 
@@ -39,12 +39,12 @@
 			<div class="Ladies_Display_Container bg-394264 br-13 pt-half px-half pb-half mx-auto mt-4 mb-half">
 				<div class="Ladies_Display row g-2">
 					<div v-for="(lady, index) in randomLadiesList" :key="index"
-						class="gallery-item col-6 col-sm-4 col-md-3 col-lg-2 pointer" style="overflow: hidden;"
+						class="gallery-item col-6 col-sm-4 col-md-3 col-lg-2 pointer overflow-hidden"
 						@click="goToLadyProfile(ladyIndexMap[index])">
 
 						<div class="bg-1E233A br-12 d-flex flex-column h-100">
-							<img v-lazy="lady.ImageList[0]" alt="Cover image"
-								style="width: 100%; height: 80%; object-fit: cover; border-top-left-radius: 12px; border-top-right-radius: 12px" />
+							<img class="rounded-top-3 w-100" v-lazy="lady.ImageList[0]" alt="Cover image"
+								style="height: 80%; object-fit: cover;" />
 
 							<div class="Info d-flex justify-content-center align-items-center color-white fs-18 fw-700"
 								style="height: 20%;">
@@ -127,7 +127,6 @@ export default {
 	background-image: url('/images/Main_Page_Top_Bg.webp');
 	background-size: 100% 100%;
 	background-repeat: no-repeat;
-	width: 100%;
 	height: 300px;
 }
 

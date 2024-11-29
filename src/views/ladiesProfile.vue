@@ -9,8 +9,7 @@
 
 			<div class="w-48">
 
-				<img v-lazy="lady.ImageList[0]" class="br-8" alt="Cover image"
-					style="width: 100%; height: 100%; object-fit: cover;" />
+				<img v-lazy="lady.ImageList[0]" class="br-8 w-100 h-100" alt="Cover image" style="object-fit: cover;" />
 
 			</div>
 
@@ -50,7 +49,7 @@
 		<div class="mt-4">
 			<div class="mt-3" v-for="(Image, Index) in lady.ImageList.slice(1, 4)" :key="Index" style="height: 60vh	;">
 
-				<img v-lazy="Image" style="width: 100%; height: 100%; object-fit: cover;" alt="Lady Image">
+				<img class="w-100 h-100" v-lazy="Image" style="object-fit: cover;" alt="Lady Image">
 
 			</div>
 		</div>
@@ -82,11 +81,12 @@
 
 			<div class="Ladies_Display_Container bg-394264 br-13 pt-half px-half pb-half mx-auto mt-4 mb-half">
 				<div class="Ladies_Display row g-2 ">
-					<div v-for="(lady, index) in randomLadiesList" :key="index" class="gallery-item col-6 pointer"
-						style=" overflow: hidden;" @click="goToLadyProfile(ladyIndexMap[index])">
+					<div v-for="(lady, index) in randomLadiesList" :key="index"
+						class="gallery-item col-6 pointer overflow-hidden"
+						@click="goToLadyProfile(ladyIndexMap[index])">
 
 						<div class="bg-1E233A br-12 d-flex flex-column h-100">
-							<img style="width: 100%; height: 80%; object-fit: cover; border-top-left-radius: 12px; border-top-right-radius: 12px"
+							<img class="rounded-top-3 w-100" style="height: 80%; object-fit: cover;"
 								v-lazy="lady.ImageList[0]" alt="Cover image" />
 							<div class="Info d-flex justify-content-center  align-items-center color-white fs-18 fw-700"
 								style="height: 20%;">
