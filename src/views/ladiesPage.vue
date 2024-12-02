@@ -21,11 +21,11 @@
 						<!-- Normal lady info and image -->
 						<div v-else class="bg-1E233A rounded-3 d-flex flex-column h-100"
 							@click="goToLadyProfile(item.index)">
-							<img class="rounded-top-3 w-100" v-lazy="item.lady.ImageList[0]" alt="Cover image"
-								style="height: 80%; object-fit: cover;" />
+							<img class="rounded-top-3 w-100 object-fit-cover h-80" v-lazy="item.lady.ImageList[0]"
+								alt="Cover image" />
 
-							<div class="Info d-flex justify-content-center align-items-center color-white fs-18 fw-bold"
-								style="height: 20%;">
+							<div
+								class="Info d-flex justify-content-center align-items-center color-white fs-18 fw-bold h-20">
 								{{ item.lady.name[this.$i18n.locale] }}, {{ item.lady.age }}
 							</div>
 						</div>
@@ -122,8 +122,4 @@ export default {
 
 </script>
 
-<style scoped>
-.Info {
-	height: 20%;
-}
-</style>
+<style scoped></style>

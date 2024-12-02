@@ -9,7 +9,7 @@
 
 			<div class="w-48">
 
-				<img v-lazy="lady.ImageList[0]" class="br-8 w-100 h-100" alt="Cover image" style="object-fit: cover;" />
+				<img v-lazy="lady.ImageList[0]" class="br-8 w-100 h-100 object-fit-cover" alt="Cover image" />
 
 			</div>
 
@@ -47,9 +47,9 @@
 
 		<!-- Image List -->
 		<div class="mt-4">
-			<div class="mt-3" v-for="(Image, Index) in lady.ImageList.slice(1, 4)" :key="Index" style="height: 60vh	;">
+			<div class="mt-3 vh-60" v-for="(Image, Index) in lady.ImageList.slice(1, 4)" :key="Index">
 
-				<img class="w-100 h-100" v-lazy="Image" style="object-fit: cover;" alt="Lady Image">
+				<img class="w-100 h-100 object-fit-cover" v-lazy="Image" alt="Lady Image">
 
 			</div>
 		</div>
@@ -58,7 +58,7 @@
 		<a class="text-decoration-none" href="https://t.me/nightmus3">
 			<div class="mt-3">
 				<div class="w-100">
-					<div class="bg-FEC72E rounded-3 pointer Chat_Button" style="padding: 8px 0;">
+					<div class="bg-FEC72E rounded-3 pointer Chat_Button py-8px">
 						<div class="d-flex justify-content-center align-items-center">
 							<div class="fs-24 fw-bold color-1E233A">
 								和我聊天吧
@@ -86,10 +86,10 @@
 						@click="goToLadyProfile(ladyIndexMap[index])">
 
 						<div class="bg-1E233A rounded-3 d-flex flex-column h-100">
-							<img class="rounded-top-3 w-100" style="height: 80%; object-fit: cover;"
-								v-lazy="lady.ImageList[0]" alt="Cover image" />
-							<div class="Info d-flex justify-content-center align-items-center color-white fs-18 fw-bold"
-								style="height: 20%;">
+							<img class="rounded-top-3 w-100 object-fit-cover h-80" v-lazy="lady.ImageList[0]"
+								alt="Cover image" />
+							<div
+								class="Info d-flex justify-content-center align-items-center color-white fs-18 fw-bold h-20">
 								<!-- Display the name and age based on the current locale -->
 								{{ lady.name[this.$i18n.locale] }}, {{ lady.age }}
 							</div>

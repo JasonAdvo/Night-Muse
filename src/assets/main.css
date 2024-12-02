@@ -63,6 +63,19 @@ body {
 	gap: 10px;
 }
 
+/* Height CSS */
+.h-20 {
+	height: 20%;
+}
+
+.h-80 {
+	height: 80%;
+}
+
+.vh-60 {
+	height: 60vh;
+}
+
 /* Font Size CSS */
 .fs-16 {
 	font-size: 16px;
@@ -84,6 +97,10 @@ body {
 	font-size: 24px;
 }
 
+.fs-30 {
+	font-size: 30px;
+}
+
 /* Font Weight CSS */
 .fw-600 {
 	font-weight: 600;
@@ -101,6 +118,18 @@ body {
 /* Padding CSS */
 .px-half {
 	padding: 0 .5rem;
+}
+
+.px-8px {
+	padding: 0 8px;
+}
+
+.py-6px {
+	padding: 6px 0;
+}
+
+.py-8px {
+	padding: 8px 0;
 }
 
 .pt-half {
