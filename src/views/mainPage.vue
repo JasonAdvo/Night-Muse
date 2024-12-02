@@ -39,7 +39,7 @@
 	<section class="mt-4">
 		<div class="Main_Page_Ladies_Section px-3">
 			<div class="w-100 bg-1E233A position-sticky" style="top: 60px;">
-				<div class=" color-8F97B5 fs-24 fw-bolder text-center">
+				<div class="color-8F97B5 fs-24 fw-bolder text-center">
 					{{ $t('Main_Page.Today_Ladies') }}
 				</div>
 			</div>
@@ -51,7 +51,7 @@
 						: 'gallery-item col-6 col-sm-4 col-md-3 col-lg-2 pointer overflow-hidden'">
 
 						<!-- Full-width image row -->
-						<div v-if="item.isFullWidth" class="full-width-image rounded-3">
+						<div v-if="item.isFullWidth" class="rounded-3">
 							<a :href="'http://t.me/sweetchat20'" target="_blank">
 								<img :src="item.image" alt="Ads Image" class="w-100 rounded-3" />
 							</a>

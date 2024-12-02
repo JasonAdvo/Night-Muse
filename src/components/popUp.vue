@@ -9,7 +9,7 @@
 
 				<div class="position-absolute w-80 start-50 translate-middle-x" style="bottom: 35px">
 					<div @click.self="closePopup"
-						class="bg-EC404B br-7 d-flex justify-content-center  align-items-center color-white fs-16 fw-400 pointer"
+						class="bg-EC404B br-7 d-flex justify-content-center align-items-center color-white fs-16 fw-400 pointer"
 						style="padding: 6px 0;">
 						进入
 					</div>
