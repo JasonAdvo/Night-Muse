@@ -16,7 +16,7 @@
 			<div class="w-48 d-flex flex-column justify-content-between">
 
 				<div class="fs-16 fw-600 color-8F97B5">
-					名字 ：{{ lady.name[this.$i18n.locale] }} ( {{ lady.name['en'] }} )
+					名字 ：{{ lady.name[this.$i18n.locale] }} ({{ lady.name['en'] }})
 				</div>
 
 				<div class="fs-16 fw-600 color-8F97B5">
