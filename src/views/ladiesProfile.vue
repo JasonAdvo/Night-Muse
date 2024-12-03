@@ -27,10 +27,6 @@
 					三围 ：{{ lady.parameter }}
 				</div>
 
-				<div class="fs-16 fw-600 color-8F97B5">
-					国际 ：{{ lady.nation[this.$i18n.locale] }}
-				</div>
-
 				<div class="d-flex fs-16 fw-600 color-8F97B5">
 					语言 ：
 					<div class="fs-16 fw-600 color-8F97B5" v-for="(lang, index) in lady.language" :key="index">

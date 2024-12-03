@@ -470,11 +470,11 @@
 	},
 	{
 		"name": {
-			"zh": "艾莉",
-			"en": "Ellie"
+			"zh": "馨兰",
+			"en": "Kelly"
 		},
-		"age": "22",
-		"parameter": "32B-22-33",
+		"age": "40",
+		"parameter": "35C-26-37",
 		"nation": {
 			"zh": "中国",
 			"en": "China"
@@ -486,7 +486,7 @@
 			}
 		],
 		"Description": {
-			"zh": "非整容脸 我是那个坏得刚刚好的小妖精，用甜蜜的调皮语调撩拨你的心，时而故意打破距离感，让你在屏幕前偷偷心动。",
+			"zh": "散发着成熟的魅力和无与伦比的亲和力，带着温柔和关怀，细心聆听，理解你的每一份情绪，全方位满足您的需求的姐姐！！",
 			"en": "No cosmetic enhancements here—I'm the little pixie who's just the right amount of mischievous. With a sweet and playful tone, I tease your heart and occasionally break the distance, making you secretly swoon behind the screen."
 		},
 		"ImageList": [
@@ -1337,11 +1337,11 @@
 	},
 	{
 		"name": {
-			"zh": "朱丽安娜",
-			"en": "Julianna"
+			"zh": "怡然",
+			"en": "Eva"
 		},
-		"age": "29",
-		"parameter": "36D-24-35",
+		"age": "31",
+		"parameter": "34C-26-36",
 		"nation": {
 			"zh": "中国",
 			"en": "China"
@@ -1353,7 +1353,7 @@
 			}
 		],
 		"Description": {
-			"zh": "冷傲灵动中颇有勾魂摄魄之态，美艳动人绝对拨动你心弦，我是那杯在你心底的热茶，暖心而不浓烈。无论你遇到怎样的糟糕心情，我都能用文字温柔地陪伴你，直到世界变得好一点。",
+			"zh": "165cm高挑又优雅，我是你深夜的陪伴者，用细腻的文字与心灵交汇，陪你度过每一个孤单的时刻。",
 			"en": "With a cold yet captivating allure, I’m the one who will touch your heart. I’m like a warm cup of tea in your soul—gentle yet not overpowering. No matter how bad your mood is, I’ll use my words to gently accompany you until the world feels a little better."
 		},
 		"ImageList": [
@@ -1368,11 +1368,11 @@
 	},
 	{
 		"name": {
-			"zh": "凯特琳",
-			"en": "Katherine"
+			"zh": "梓萱",
+			"en": "Zoey"
 		},
-		"age": "21",
-		"parameter": "34B-24-35",
+		"age": "35",
+		"parameter": "33B-24-34",
 		"nation": {
 			"zh": "新加坡",
 			"en": "Singapore"
@@ -1381,14 +1381,10 @@
 			{
 				"zh": "中文",
 				"en": "Chinese"
-			},
-			{
-				"zh": "英语",
-				"en": "English"
 			}
 		],
 		"Description": {
-			"zh": "清纯零整嫩妹专属，心形胶原蛋白蓬蓬脸，澄澈眸子低眉顺眼，唇红齿白，笑容洋溢春暖花开，是哥哥的校园初恋吖！我的话不多，但每个字都带着含蓄的挑逗。你会在简单的对话中，发现那一丝丝让人上瘾的甜蜜和暗示",
+			"zh": "162cm的清新女孩，我是温暖的邻家姐姐，用幽默的方式为你赶走烦恼。",
 			"en": "Pure, fresh, and youthful, with a heart-shaped face full of collagen, clear eyes, gentle gaze, red lips, and white teeth. My smile blooms like spring, making me the perfect schoolgirl crush! I don’t speak much, but every word carries subtle teasing. In simple conversations, you’ll find that addictive sweetness and hidden hints."
 		},
 		"ImageList": [
