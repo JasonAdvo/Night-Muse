@@ -24,6 +24,7 @@ app.use(store)
 app.use(VueLazyload, {
 	preload: 1.3,
 	attempt: 1,
+	loading: '/images/OIP.webp',
 });
 
 app.mount('#app')
