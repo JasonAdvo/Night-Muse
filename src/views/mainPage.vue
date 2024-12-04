@@ -113,9 +113,9 @@ export default {
 	computed: {
 		adjustedLadiesList() {
 			const breakpoints = {
-				xs: 6, // col-6
-				sm: 9, // col-sm-4
-				md: 12, // col-md-3
+				xs: 10, // col-6
+				sm: 15, // col-sm-4
+				md: 16, // col-md-3
 				lg: 18, // col-lg-2
 			};
 
@@ -131,6 +131,8 @@ export default {
 			const itemsPerRow = breakpoints[breakpoint];
 
 			const adjustedList = [];
+			let fullWidthImageInserted = false;
+
 			this.randomLadiesList.forEach((lady, index) => {
 				adjustedList.push({
 					lady,
@@ -139,11 +141,12 @@ export default {
 				});
 
 				// After each group of itemsPerRow, insert a full-width image
-				if ((index + 1) % itemsPerRow === 0) {
+				if (!fullWidthImageInserted && (index + 1) % itemsPerRow === 0) {
 					adjustedList.push({
 						isFullWidth: true,
 						image: this.fullWidthImage,
 					});
+					fullWidthImageInserted = true; // Ensure the image is inserted only once
 				}
 			});
 

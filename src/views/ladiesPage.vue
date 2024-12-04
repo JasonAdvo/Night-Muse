@@ -77,6 +77,8 @@ export default {
 			const itemsPerRow = breakpoints[breakpoint];
 
 			const adjustedList = [];
+			let fullWidthImageInserted = false; // Track whether the full-width image is inserted
+
 			this.randomLadiesList.forEach((lady, index) => {
 				adjustedList.push({
 					lady,
@@ -84,12 +86,13 @@ export default {
 					index: this.ladyIndexMap[index], // Use the original index mapping for correct redirection
 				});
 
-				// After each group of itemsPerRow, insert a full-width image
-				if ((index + 1) % itemsPerRow === 0) {
+				// Insert a full-width image only once, after the first group of `itemsPerRow`
+				if (!fullWidthImageInserted && (index + 1) % itemsPerRow === 0) {
 					adjustedList.push({
 						isFullWidth: true,
 						image: this.fullWidthImage,
 					});
+					fullWidthImageInserted = true; // Ensure the image is inserted only once
 				}
 			});
 
