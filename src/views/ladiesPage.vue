@@ -59,10 +59,10 @@ export default {
 	computed: {
 		adjustedLadiesList() {
 			const breakpoints = {
-				xs: 4, // col-6
-				sm: 6, // col-sm-4
-				md: 8, // col-md-3
-				lg: 12, // col-lg-2
+				xs: 10, // col-6
+				sm: 15, // col-sm-4
+				md: 20, // col-md-3
+				lg: 30, // col-lg-2
 			};
 
 			// Dynamically determine current breakpoint
