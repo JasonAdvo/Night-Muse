@@ -7,11 +7,12 @@
 		<topBar />
 	</div>
 
-	<div v-if="currentAdsState" class="Btm-Popup_Container fixed-bottom" style="width: 100px; z-index: 10;">
+	<div v-if="currentAdsState" class="Btm-Popup_Container fixed-bottom"
+		style="width: 100px; z-index: 10; bottom: 40px;">
 		<i class="ic-close-circle fas fa-times-circle d-flex justify-content-center rounded-circle top-0 pointer"
 			@click="closePopup"></i>
 		<a :href="'http://t.me/sweetchat20'">
-			<img class="w-100" src="/images/758 Gaming.webp" alt="Join Us Now">
+			<img class="w-100" src="/images/Floating_Ads.gif" alt="Join Us Now">
 		</a>
 	</div>
 
@@ -103,7 +104,8 @@ export default {
 			Ladies: LadiesList, // Make sure Ladies is defined here
 			ladyIndexMap: [],
 			randomLadiesList: [],
-			fullWidthImage: '/images/Announcement Bar.webp',
+			fullWidthImageWeb: '/images/Ads_Banner.gif',
+			fullWidthImageMobile: '/images/Ads_Banner_Mobile.gif',
 			isVisible: true,
 		}
 	},
@@ -130,6 +132,12 @@ export default {
 			const breakpoint = getBreakpoint();
 			const itemsPerRow = breakpoints[breakpoint];
 
+			let imageChosen = this.fullWidthImageMobile;
+
+			if (breakpoint === 'lg') {
+				imageChosen = this.fullWidthImageWeb;
+			}
+
 			const adjustedList = [];
 			let fullWidthImageInserted = false;
 
@@ -144,7 +152,7 @@ export default {
 				if (!fullWidthImageInserted && (index + 1) % itemsPerRow === 0) {
 					adjustedList.push({
 						isFullWidth: true,
-						image: this.fullWidthImage,
+						image: imageChosen,
 					});
 					fullWidthImageInserted = true; // Ensure the image is inserted only once
 				}

@@ -50,7 +50,8 @@ export default {
 			Ladies: LadiesList, // Make sure Ladies is defined here
 			ladyIndexMap: [],
 			randomLadiesList: [],
-			fullWidthImage: '/images/Announcement Bar.webp',
+			fullWidthImageWeb: '/images/Ads_Banner.gif',
+			fullWidthImageMobile: '/images/Ads_Banner_Mobile.gif',
 		}
 	},
 	mounted() {
@@ -76,6 +77,12 @@ export default {
 			const breakpoint = getBreakpoint();
 			const itemsPerRow = breakpoints[breakpoint];
 
+			let imageChosen = this.fullWidthImageMobile;
+
+			if (breakpoint === 'lg') {
+				imageChosen = this.fullWidthImageWeb;
+			}
+
 			const adjustedList = [];
 			let fullWidthImageInserted = false; // Track whether the full-width image is inserted
 
@@ -90,7 +97,7 @@ export default {
 				if (!fullWidthImageInserted && (index + 1) % itemsPerRow === 0) {
 					adjustedList.push({
 						isFullWidth: true,
-						image: this.fullWidthImage,
+						image: imageChosen,
 					});
 					fullWidthImageInserted = true; // Ensure the image is inserted only once
 				}
