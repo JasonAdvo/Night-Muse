@@ -11,7 +11,7 @@
 		style="width: 100px; z-index: 10; bottom: 40px;">
 		<i class="ic-close-circle fas fa-times-circle d-flex justify-content-center rounded-circle top-0 pointer"
 			@click="closePopup"></i>
-		<a :href="'http://t.me/sweetchat20'">
+		<a :href="' https://www.aubet1.com/'">
 			<img class="w-100" src="/images/Floating_Ads.gif" alt="Join Us Now">
 		</a>
 	</div>
@@ -53,7 +53,7 @@
 
 						<!-- Full-width image row -->
 						<div v-if="item.isFullWidth" class="rounded-3">
-							<a :href="'http://t.me/sweetchat20'" target="_blank">
+							<a :href="' https://www.aubet1.com/'" target="_blank">
 								<img :src="item.image" alt="Ads Image" class="w-100 rounded-3" />
 							</a>
 						</div>

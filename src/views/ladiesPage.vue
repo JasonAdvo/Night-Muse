@@ -13,7 +13,7 @@
 
 						<!-- Full-width image row -->
 						<div v-if="item.isFullWidth" class="full-width-image rounded-3">
-							<a :href="'http://t.me/sweetchat20'" target="_blank">
+							<a :href="' https://www.aubet1.com/'" target="_blank">
 								<img :src="item.image" alt="Ads Image" class="w-100 rounded-3" />
 							</a>
 						</div>
